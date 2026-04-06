@@ -17,6 +17,7 @@ from models.correccionesniveles import CorreccionesNiveles
 from models.alarmas import Alarmas
 from models.diccionarioalarmas import DiccionarioAlarmas
 from models.diccionariocancelaciones import DiccionarioCancelaciones
+from models.diccionarioestados import DiccionarioEstados
 from models.reportesenviados import ReportesEnviados
 
 
@@ -26,7 +27,7 @@ with create_engine(f"mysql+pymysql://{os.getenv('DB_USER')}:{os.getenv('DB_PASSW
     connection.execute(text(f"CREATE DATABASE IF NOT EXISTS {os.getenv('DB_NAME')}"))
     print(f"✓ Base de datos '{os.getenv('DB_NAME')}' verificada o creada exitosamente")
 
-#db.Base.metadata.drop_all(bind=db.engine)
+db.Base.metadata.drop_all(bind=db.engine)
 db.Base.metadata.create_all(bind=db.engine)
 cargar_datos_iniciales()
 

@@ -12,3 +12,4 @@ class NivelesCiclos(Base):
     finalizado = Column(Boolean, default=False)
     tiempo_nivel = Column(Integer, nullable=True) #En segundos
     id_cancelaciones = Column(Integer, ForeignKey('diccionarioCancelaciones.id_cancelaciones'), nullable=True)
+    seleccionado = Column(Boolean, default=False)

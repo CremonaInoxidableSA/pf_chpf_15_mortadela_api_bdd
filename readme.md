@@ -4,7 +4,6 @@ python -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
 
-python insertar_recetas_temp.py
 uvicorn main:app --host 0.0.0.0 --port 8050 --reload
 
 # BLOQUEO POR MYSQL
