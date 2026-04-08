@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Boolean, DateTime, ForeignKey
+from sqlalchemy import Column, Integer, String, Boolean, DateTime, ForeignKey, JSON
 from sqlalchemy.orm import relationship
 from config.db import Base
 from datetime import datetime
@@ -11,5 +11,5 @@ class NivelesCiclos(Base):
     nivel = Column(Integer, nullable=True)
     finalizado = Column(Boolean, default=False)
     tiempo_nivel = Column(Integer, nullable=True) #En segundos
-    id_cancelaciones = Column(Integer, ForeignKey('diccionarioCancelaciones.id_cancelaciones'), nullable=True)
+    cancelaciones = Column(JSON, nullable=True)
     seleccionado = Column(Boolean, default=False)

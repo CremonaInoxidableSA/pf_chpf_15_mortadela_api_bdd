@@ -19,7 +19,7 @@ from models.diccionarioalarmas import DiccionarioAlarmas
 from models.diccionariocancelaciones import DiccionarioCancelaciones
 from models.diccionarioestados import DiccionarioEstados
 from models.reportesenviados import ReportesEnviados
-
+from models.fallocapturaciclos import FalloCapturaCiclos
 
 load_dotenv()
 # Crear la base de datos si no existe
