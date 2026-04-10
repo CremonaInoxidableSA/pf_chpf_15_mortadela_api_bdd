@@ -10,4 +10,4 @@ class CorreccionesNiveles(Base):
     valor = Column(Integer, nullable=True)
     nivel = Column(Integer, nullable=True)
     tipo = Column(String(100), nullable=True)
-    id_torre = Column(Integer, ForeignKey('torres.id_torre'), nullable=True)
+    id_rack = Column(Integer, ForeignKey('racks.id_rack'), nullable=True)

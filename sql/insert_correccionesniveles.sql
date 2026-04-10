@@ -1,4 +1,4 @@
-INSERT INTO correccionesniveles (id_correccion, valor, nivel, tipo, id_torre) VALUES
+INSERT INTO correccionesniveles (id_correccion, valor, nivel, tipo, id_rack) VALUES
 (1, 1, 1, 'ChG', 1),
 (2, 1, 2, 'ChG', 1),
 (3, 1, 3, 'ChG', 1),

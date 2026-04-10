@@ -6,11 +6,12 @@ from dotenv import load_dotenv
 
 from config import db
 from config.sql_loader import cargar_datos_iniciales
+from routes.ciclos import router as ciclos_router
 
 from models.usuarios import Usuarios
 from models.ciclos import Ciclos
 from models.recetas import Recetas
-from models.torres import Torres
+from models.torres import Racks
 from models.equipo import Equipo
 from models.nivelesciclos import NivelesCiclos
 from models.correccionesniveles import CorreccionesNiveles
@@ -45,6 +46,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Registrar routers HTTP
+app.include_router(ciclos_router)
 
 @app.get("/")
 def read_root():

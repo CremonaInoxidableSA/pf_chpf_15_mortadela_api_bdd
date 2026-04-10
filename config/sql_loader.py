@@ -50,7 +50,7 @@ def cargar_datos_iniciales() -> None:
 
     archivos = [
         os.path.join(SQL_DIR, "insert_recetas.sql"),
-        os.path.join(SQL_DIR, "insert_torres.sql"),
+        os.path.join(SQL_DIR, "insert_racks.sql"),
         os.path.join(SQL_DIR, "insert_equipo.sql"),
         os.path.join(SQL_DIR, "insert_correccionesniveles.sql"),
         os.path.join(SQL_DIR, "insert_estados.sql"),
