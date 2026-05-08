@@ -18,7 +18,6 @@ from models.correccionesniveles import CorreccionesNiveles
 from models.alarmas import Alarmas
 from models.diccionarioalarmas import DiccionarioAlarmas
 from models.diccionariocancelaciones import DiccionarioCancelaciones
-from models.diccionarioestados import DiccionarioEstados
 from models.reportesenviados import ReportesEnviados
 from models.fallocapturaciclos import FalloCapturaCiclos
 

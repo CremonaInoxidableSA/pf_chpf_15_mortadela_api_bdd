@@ -5,7 +5,6 @@ from config.db import SessionLocal
 
 from models.ciclos import Ciclos
 from models.nivelesciclos import NivelesCiclos
-from models.diccionarioestados import DiccionarioEstados
 from models.recetas import Recetas
 from models.torres import Racks
 from models.diccionariocancelaciones import DiccionarioCancelaciones
@@ -90,10 +89,7 @@ def get_datos_ciclo(id_ciclo: int):
                 detail="Ciclo no encontrado"
             )
         
-        estado_obj = db.query(DiccionarioEstados).filter(
-            DiccionarioEstados.id_estado == ciclo.id_estado
-        ).first()
-        estado = estado_obj.descripcion if estado_obj else None
+        estado = ciclo.estado_ciclo
         
         receta = db.query(Recetas).filter(
             Recetas.id_receta == ciclo.id_receta

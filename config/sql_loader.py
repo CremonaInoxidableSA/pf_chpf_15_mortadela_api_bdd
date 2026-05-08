@@ -53,7 +53,6 @@ def cargar_datos_iniciales() -> None:
         os.path.join(SQL_DIR, "insert_racks.sql"),
         os.path.join(SQL_DIR, "insert_equipo.sql"),
         os.path.join(SQL_DIR, "insert_correccionesniveles.sql"),
-        os.path.join(SQL_DIR, "insert_estados.sql"),
         os.path.join(SQL_DIR, "insert_tempciclos.sql"),
         os.path.join(SQL_DIR, "insert_tempniveles.sql"),
     ]

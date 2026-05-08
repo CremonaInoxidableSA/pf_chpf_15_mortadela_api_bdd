@@ -13,3 +13,4 @@ class NivelesCiclos(Base):
     tiempo_nivel = Column(Integer, nullable=True) #En segundos
     cancelaciones = Column(JSON, nullable=True)
     seleccionado = Column(Boolean, default=False)
+    estado_nivel = Column(String(255), nullable=True)
