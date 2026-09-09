@@ -21,9 +21,9 @@ with create_engine(f"mysql+pymysql://{os.getenv('DB_USER')}:{os.getenv('DB_PASSW
     connection.execute(text(f"CREATE DATABASE IF NOT EXISTS {os.getenv('DB_NAME')}"))
     print(f"✓ Base de datos '{os.getenv('DB_NAME')}' verificada o creada exitosamente")
 
-db.Base.metadata.drop_all(bind=db.engine)
-db.Base.metadata.create_all(bind=db.engine)
-cargar_datos_iniciales()
+#db.Base.metadata.drop_all(bind=db.engine)
+#db.Base.metadata.create_all(bind=db.engine)
+#cargar_datos_iniciales()
 
 app = FastAPI(title="API Mortadela CORRECCIONES", version="1.0.0")
 

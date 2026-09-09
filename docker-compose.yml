@@ -1,0 +1,33 @@
+networks:
+  macvlan_network:
+    driver: macvlan
+    driver_opts:
+      parent: eno1
+    ipam:
+      config:
+        - subnet: 192.168.10.0/24
+          gateway: 192.168.10.240
+
+services:
+  mysql_bdd:
+    image: mysql:8.0.32
+    container_name: mysql_bdd_container
+    restart: always
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_PASSWORD}
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data_bdd:/var/lib/mysql
+    networks:
+      macvlan_network:
+        ipv4_address: 192.168.10.5
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      retries: 5
+      start_period: 30s
+
+volumes:
+  mysql_data_bdd:

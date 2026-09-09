@@ -1,0 +1,8 @@
+FROM mysql:8.0.32
+
+ENV TZ=America/Santiago
+
+ENV MYSQL_DATABASE=pf_mortadela
+ENV MYSQL_ROOT_PASSWORD=echo32415
+
+EXPOSE 3306
